@@ -1,0 +1,13 @@
+.h5p-3d-image-hotspots-message-box {
+  background-color: var(--h5p-theme-feedback-neutral-third, #F0EBCB);
+  border: 1px solid var(--h5p-theme-feedback-neutral-main, #E6C81D);
+  box-sizing: border-box;
+  color: var(--h5p-theme-feedback-neutral-secondary, #5E4817);
+  font-size: var(--h5p-theme-spacing-s, 1rem);
+  padding: var(--h5p-theme-spacing-s, 1rem);
+
+  .h5p-3d-image-hotspots-message-box-message {
+    margin: 0;
+    text-align: center;
+  }
+}

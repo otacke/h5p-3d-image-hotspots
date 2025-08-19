@@ -1,0 +1,478 @@
+[
+  {
+    "name": "model",
+    "type": "group",
+    "label": "Model",
+    "expanded": true,
+    "importance": "high",
+    "fields": [
+      {
+        "name": "file",
+        "label": "3D model file",
+        "description": "Upload a glTF (.glb / .gltf) file here. The preferred format is \"glTF 2.0 binary\" in a single file.",
+        "type": "file",
+        "widget": "threeDModel",
+        "threeDModelLoader": {
+          "fileTypeExtensions": [
+            "gltf",
+            "glb"
+          ],
+          "altPath": "alt"
+        }
+      },
+      {
+        "name": "alt",
+        "type": "text",
+        "label": "Alternative text",
+        "description": "Alternative text for screen readers.",
+        "length": 5000
+      }
+    ]
+  },
+  {
+    "name": "hotspots",
+    "type": "group",
+    "label": "Hotspots",
+    "importance": "high",
+    "widget": "threeDModelAnnotations",
+    "threeDModelAnnotations": {
+      "modelFileField": "model/file",
+      "annotationIdField": "id",
+      "annotationTextField": "label",
+      "annotationSurfaceField": "surface"
+    },
+    "fields": [
+      {
+        "name": "hotspots",
+        "type": "list",
+        "label": "Hotspots",
+        "importance": "high",
+        "item": "hotspot",
+        "widgets": [
+          {
+            "name": "VerticalTabs",
+            "label": "Default"
+          }
+        ],
+        "min": "1",
+        "field": {
+          "type": "group",
+          "name": "hotspot",
+          "label": "Hotspot",
+          "fields": [
+            {
+              "name": "id",
+              "type": "text",
+              "label": "Id",
+              "widget": "none"
+            },
+            {
+              "name": "label",
+              "type": "text",
+              "label": "Label/description"
+            },
+            {
+              "name": "appearance",
+              "type": "group",
+              "label": "Appearance",
+              "fields": [
+                {
+                  "name": "type",
+                  "type": "select",
+                  "label": "Type",
+                  "options": [
+                    {
+                      "value": "label",
+                      "label": "Label"
+                    },
+                    {
+                      "value": "button",
+                      "label": "Button"
+                    }
+                  ],
+                  "default": "label"
+                },
+                {
+                  "name": "icon",
+                  "type": "select",
+                  "label": "Symbol",
+                  "options": [
+                    {
+                      "value": "plus",
+                      "label": "Plus"
+                    },
+                    {
+                      "value": "minus",
+                      "label": "Minus"
+                    },
+                    {
+                      "value": "times",
+                      "label": "Times"
+                    },
+                    {
+                      "value": "check",
+                      "label": "Check"
+                    },
+                    {
+                      "value": "question",
+                      "label": "Question"
+                    },
+                    {
+                      "value": "info",
+                      "label": "Info"
+                    },
+                    {
+                      "value": "exclamation",
+                      "label": "Exclamation"
+                    }
+                  ],
+                  "default": "plus",
+                  "widget": "showWhen",
+                  "showWhen": {
+                    "rules": [
+                      {
+                        "field": "type",
+                        "equals": "button"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "color",
+                  "type": "text",
+                  "label": "Color",
+                  "optional": true,
+                  "widget": "colorSelector",
+                  "spectrum": {
+                    "showInput": true,
+                    "showInitial": true,
+                    "showAlpha": true,
+                    "allowEmpty": true,
+                    "preferredFormat": "rgb"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "contents",
+              "type": "list",
+              "label": "Contents",
+              "item": "content",
+              "min": "1",
+              "field": {
+                "type": "group",
+                "name": "content",
+                "label": "Content",
+                "fields": [
+                  {
+                    "name": "action",
+                    "type": "library",
+                    "label": "Content Item",
+                    "options": [
+                      "H5P.Audio 1.5",
+                      "H5P.Image 1.1",
+                      "H5P.AdvancedText 1.1",
+                      "H5P.Video 1.6"
+                    ]
+                  },
+                  {
+                    "name": "dummy",
+                    "type": "text",
+                    "label": "dummy",
+                    "widget": "none"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "surface",
+              "type": "text",
+              "label": "Surface",
+              "widget": "none"
+            }
+          ]
+        }
+      },
+      {
+        "name": "dummy",
+        "type": "boolean",
+        "label": "dummy",
+        "widget": "none"
+      }
+    ]
+  },
+  {
+    "name": "visuals",
+    "type": "group",
+    "label": "Visual settings",
+    "fields": [
+      {
+        "name": "backgroundImage",
+        "type": "image",
+        "label": "Background image",
+        "description": "Optional image that will be used for the background.",
+        "optional": true
+      },
+      {
+        "name": "backgroundColor",
+        "type": "text",
+        "label": "Background color",
+        "optional": true,
+        "default": "rgba(255, 255, 255, 1)",
+        "widget": "colorSelector",
+        "spectrum": {
+          "showInput": true,
+          "showInitial": true,
+          "showAlpha": true,
+          "preferredFormat": "rgb"
+        }
+      },
+      {
+        "name": "poster",
+        "type": "image",
+        "label": "Poster image",
+        "description": "Optional image that will be shown before the 3D model is loaded. This can be used to show a preview of the 3D model that is large and may need some time to load. Note that it makes only sense to add a poster image if the file is not too large in size itself.",
+        "optional": true
+      },
+      {
+        "name": "hotspotColorDefault",
+        "type": "text",
+        "label": "Default color for hotspots",
+        "optional": true,
+        "widget": "colorSelector",
+        "spectrum": {
+          "showInput": true,
+          "showInitial": true,
+          "showAlpha": true,
+          "allowEmpty": true,
+          "preferredFormat": "rgb"
+        }
+      }
+    ]
+  },
+  {
+    "name": "size",
+    "type": "group",
+    "label": "Size settings",
+    "fields": [
+      {
+        "name": "maxWidth",
+        "type": "text",
+        "label": "Maximum width",
+        "description": "H5P will usually scale content to full width. Set a maximum width here in CSS units (px, rem, etc.). Please note that this will not influence the maximum width of the H5P content as a whole.",
+        "optional": true
+      },
+      {
+        "name": "minHeight",
+        "type": "text",
+        "label": "Minimum height",
+        "description": "H5P will usually determine the height based on the width. Change the minimum height here in CSS units (px, rem, etc.) in case the model is displayes too small for your liking.",
+        "optional": true
+      },
+      {
+        "name": "maxHeight",
+        "type": "text",
+        "label": "Maximum height",
+        "description": "H5P will usually determine the height based on the width. Set a maximum height here in CSS units (px, rem, etc.). Please note that this will not influence the maximum height of the H5P content as a whole.",
+        "optional": true
+      }
+    ]
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioural settings",
+    "fields": [
+      {
+        "name": "presentation",
+        "type": "select",
+        "label": "Presentation",
+        "options": [
+          {
+            "value": "popup",
+            "label": "Popup"
+          },
+          {
+            "value": "sidePanel",
+            "label": "Panel on the side"
+          }
+        ],
+        "default": "popup"
+      },
+      {
+        "name": "dummy",
+        "type": "text",
+        "label": "Dummy",
+        "widget": "none"
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "label": "User interface",
+    "common": true,
+    "fields": [
+      {
+        "name": "noModel",
+        "type": "text",
+        "label": "No model found",
+        "default": "Could not load a 3D model. Did someone forget to upload one?"
+      },
+      {
+        "name": "noHotspotsWithContents",
+        "type": "text",
+        "label": "No hotspots with contents",
+        "default": "No hotspots with contents found. Did someone forget to add some or to attach the hotspots to the model?"
+      },
+      {
+        "name": "clickOnHotspotToSeeDetails",
+        "type": "text",
+        "label": "Click on a hotspot to see details",
+        "default": "Click on a hotspot to see details."
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "label": "Accessibility texts",
+    "common": true,
+    "fields": [
+      {
+        "name": "front",
+        "type": "text",
+        "label": "Front of 3D model",
+        "description": "Alternative text for the front of the 3D model.",
+        "default": "Front of 3D model"
+      },
+      {
+        "name": "back",
+        "type": "text",
+        "label": "Back of 3D model",
+        "description": "Alternative text for the back of the 3D model.",
+        "default": "Back of 3D model"
+      },
+      {
+        "name": "left",
+        "type": "text",
+        "label": "Left of 3D model",
+        "description": "Alternative text for the left side of the 3D model.",
+        "default": "Left of 3D model"
+      },
+      {
+        "name": "right",
+        "type": "text",
+        "label": "Right of 3D model",
+        "description": "Alternative text for the right side of the 3D model.",
+        "default": "Right of 3D model"
+      },
+      {
+        "name": "upper-front",
+        "type": "text",
+        "label": "Upper front of 3D model",
+        "description": "Alternative text for the upper front of the 3D model.",
+        "default": "Upper front of 3D model"
+      },
+      {
+        "name": "upper-back",
+        "type": "text",
+        "label": "Upper back of 3D model",
+        "description": "Alternative text for the upper back of the 3D model.",
+        "default": "Upper back of 3D model"
+      },
+      {
+        "name": "upper-left",
+        "type": "text",
+        "label": "Upper left of 3D model",
+        "description": "Alternative text for the upper left side of the 3D model.",
+        "default": "Upper left of 3D model"
+      },
+      {
+        "name": "upper-right",
+        "type": "text",
+        "label": "Upper right of 3D model",
+        "description": "Alternative text for the upper right side of the 3D model.",
+        "default": "Upper right of 3D model"
+      },
+      {
+        "name": "lower-front",
+        "type": "text",
+        "label": "Lower front of 3D model",
+        "description": "Alternative text for the lower front of the 3D model.",
+        "default": "Lower front of 3D model"
+      },
+      {
+        "name": "lower-back",
+        "type": "text",
+        "label": "Lower back of 3D model",
+        "description": "Alternative text for the lower back of the 3D model.",
+        "default": "Lower back of 3D model"
+      },
+      {
+        "name": "lower-left",
+        "type": "text",
+        "label": "Lower left of 3D model",
+        "description": "Alternative text for the lower left side of the 3D model.",
+        "default": "Lower left of 3D model"
+      },
+      {
+        "name": "lower-right",
+        "type": "text",
+        "label": "Lower right of 3D model",
+        "description": "Alternative text for the lower right side of the 3D model.",
+        "default": "Lower right of 3D model"
+      },
+      {
+        "name": "interaction-prompt",
+        "type": "text",
+        "label": "Interaction prompt",
+        "description": "Text that is read out to the user when the 3D model is focused and the user can interact with it.",
+        "default": "Use mouse, touch or arrow keys to move to interact with the 3D model."
+      },
+      {
+        "name": "buttonFullscreenEnter",
+        "type": "text",
+        "label": "Text for screen readers. Title for full screen button (enter)",
+        "importance": "low",
+        "default": "Enter full screen mode"
+      },
+      {
+        "name": "buttonFullscreenExit",
+        "type": "text",
+        "label": "Text for screen readers. Title for full screen button (exit)",
+        "importance": "low",
+        "default": "Exit full screen mode"
+      },
+      {
+        "name": "buttonPlay",
+        "type": "text",
+        "label": "Text for screen readers. Title for play button",
+        "importance": "low",
+        "default": "Play animation"
+      },
+      {
+        "name": "buttonPause",
+        "type": "text",
+        "label": "Text for screen readers. Title for pause button",
+        "importance": "low",
+        "default": "Pause animation"
+      },
+      {
+        "name": "close",
+        "type": "text",
+        "label": "Text for screen readers. Title for close button",
+        "importance": "low",
+        "default": "Close"
+      },
+      {
+        "name": "popupLabel",
+        "type": "text",
+        "label": "Text for screen readers. Label for popup",
+        "description": "@label is a placeholder and will be replaced with the respective hotspot label.",
+        "importance": "low",
+        "default": "Contents for hotspot @label."
+      }
+    ]
+  }
+]

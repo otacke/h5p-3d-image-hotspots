@@ -1,0 +1,78 @@
+.h5p-3d-image-hotspots-overlay-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--h5p-theme-spacing-xs, 0.5rem);
+  justify-content: flex-end;
+  padding: var(--h5p-theme-spacing-xs, 0.5rem);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: fit-content;
+  z-index: 1; /* Put before model for tabbing order, but should be on top */
+
+  .h5p-3d-image-hotspots-button {
+    --button-size: 2.25rem;
+    --button-padding: 0.5rem;
+
+    background-color: var(--h5p-3d-image-hotspots-theme-ui-base);
+    border: 1px solid var(--h5p-3d-image-hotspots-theme-text-primary);
+    border-radius: 50%;
+    color: var(--h5p-3d-image-hotspots-theme-text-primary);
+    cursor: pointer;
+    height: var(--button-size);
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    transition: border-color 100ms, opacity 100ms;
+    width: var(--button-size);
+
+    &::before {
+      font-family: "H5PFontAwesome4", sans-serif;
+      font-size: var(--h5p-theme-font-size-m, 1rem);
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:focus {
+      outline: #000 auto 1px;
+    }
+
+    &:hover {
+      background-color: var(--h5p-3d-image-hotspots-theme-contrast-cta-white);
+      border-color: var(--h5p-3d-image-hotspots-theme-contrast-cta-white);
+      color: var(--h5p-3d-image-hotspots-theme-secondary-contrast-cta-hover);
+    }
+
+    &:active {
+      background-color: var(--h5p-3d-image-hotspots-theme-contrast-cta-white);
+      border-color: var(--h5p-3d-image-hotspots-theme-contrast-cta-white);
+      color: var(--h5p-3d-image-hotspots-theme-secondary-contrast-cta-hover);
+    }
+
+    &.h5p-3d-image-hotspots-button-play {
+      &.playing::before {
+        content: var(--icon-pause);
+      }
+
+      &:not(.playing)::before {
+        content: var(--icon-play);
+        left: 52%; /* Is slightly off in font-awesome */
+      }
+    }
+  }
+}
+
+.h5p-container.h5p-fullscreen .h5p-3d-image-hotspots-overlay-buttons {
+  .h5p-3d-image-hotspots-button-fullscreen::before {
+    content: var(--icon-exit-fullscreen);
+  }
+}
+
+.h5p-container:not(.h5p-fullscreen) .h5p-3d-image-hotspots-overlay-buttons {
+  .h5p-3d-image-hotspots-button-fullscreen::before {
+    content: var(--icon-enter-fullscreen);
+  }
+}

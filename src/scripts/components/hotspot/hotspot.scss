@@ -1,0 +1,83 @@
+.hotspot {
+  background-color: var(--hotspot-background-color);
+  border-radius: 50%;
+  box-shadow: 0 0 5px 0 var(--hotspot-color);
+  color: var(--hotspot-color);
+  cursor: pointer;
+  height: 1rem;
+  padding: 0;
+  transition: all .2s ease-in-out;
+  width: 1rem;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+
+  &:not(.hotspot-button) {
+    border: 1px solid hsl(from var(--hotspot-background-color) h s calc(l * 0.75));
+  }
+
+  &.hotspot-button {
+    border: 0.2rem solid var(--hotspot-color);
+    --size: 2.25rem;
+    height: var(--size);
+    position: relative;
+    width: var(--size);
+
+    &::before {
+      font-family: "H5PFontAwesome4", sans-serif;
+      font-size: calc(var(--size) * 0.65);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &.plus::before {
+      content: var(--icon-hotspot-button-plus);
+      top: 55%; /* Is slightly off in font-awesome */
+    }
+
+    &.minus::before {
+      content: var(--icon-hotspot-button-minus);
+      top: 55%; /* Is slightly off in font-awesome */
+    }
+
+    &.times::before {
+      content: var(--icon-hotspot-button-times);
+    }
+
+    &.check::before {
+      content: var(--icon-hotspot-button-check);
+    }
+
+    &.question::before {
+      content: var(--icon-hotspot-button-question);
+    }
+
+    &.info::before {
+      content: var(--icon-hotspot-button-info);
+    }
+
+    &.exclamation::before {
+      content: var(--icon-hotspot-button-exclamation);
+    }
+  }
+
+  .hotspot-label {
+    background-color: #eeeeee;
+    border-radius: 4px;
+    color: #101010;
+    font-size: var(--h5p-theme-spacing-s, 1rem);
+    max-width: 30ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform: translate(1.25rem, calc(-50% + 0.5rem));
+    padding: 0.25rem 0.5rem;
+    transform: translate(calc(var(--h5p-theme-spacing-s, 1rem) * 1.25), calc(-50% + var(--h5p-theme-spacing-xxs, 0.5rem)));
+    padding: calc(var(--h5p-theme-spacing-s, 1rem) * 0.25) var(--h5p-theme-spacing-xxs, 0.5rem);
+
+    position: absolute;
+    white-space: nowrap;
+  }
+}

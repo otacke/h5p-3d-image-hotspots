@@ -1,0 +1,14 @@
+.threed-model-view {
+  --hotspot-background-color: rgba(255, 255, 255, 0.5);
+  --hotspot-color: rgba(0, 0, 0);
+  --min-hotspot-opacity: 0.1;
+
+  aspect-ratio: var(--aspect-ratio);
+  height: 100%;
+  margin-inline: auto;
+  width: 100%;
+
+  &.display-none {
+    display: none;
+  }
+}

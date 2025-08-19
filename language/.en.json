@@ -1,0 +1,273 @@
+{
+  "semantics": [
+    {
+      "label": "Model",
+      "fields": [
+        {
+          "label": "3D model file",
+          "description": "Upload a glTF (.glb / .gltf) file here. The preferred format is \"glTF 2.0 binary\" in a single file."
+        },
+        {
+          "label": "Alternative text",
+          "description": "Alternative text for screen readers."
+        }
+      ]
+    },
+    {
+      "label": "Hotspots",
+      "fields": [
+        {
+          "label": "Hotspots",
+          "widgets": [
+            {
+              "label": "Default"
+            }
+          ],
+          "field": {
+            "label": "Hotspot",
+            "fields": [
+              {
+                "label": "Id"
+              },
+              {
+                "label": "Label/description"
+              },
+              {
+                "label": "Appearance",
+                "fields": [
+                  {
+                    "label": "Type",
+                    "options": [
+                      {
+                        "label": "Label"
+                      },
+                      {
+                        "label": "Button"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Symbol",
+                    "options": [
+                      {
+                        "label": "Plus"
+                      },
+                      {
+                        "label": "Minus"
+                      },
+                      {
+                        "label": "Times"
+                      },
+                      {
+                        "label": "Check"
+                      },
+                      {
+                        "label": "Question"
+                      },
+                      {
+                        "label": "Info"
+                      },
+                      {
+                        "label": "Exclamation"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Color"
+                  }
+                ]
+              },
+              {
+                "label": "Contents",
+                "field": {
+                  "label": "Content",
+                  "fields": [
+                    {
+                      "label": "Content Item"
+                    },
+                    {
+                      "label": "dummy"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Surface"
+              }
+            ]
+          }
+        },
+        {
+          "label": "dummy"
+        }
+      ]
+    },
+    {
+      "label": "Visual settings",
+      "fields": [
+        {
+          "label": "Background image",
+          "description": "Optional image that will be used for the background."
+        },
+        {
+          "label": "Background color"
+        },
+        {
+          "label": "Poster image",
+          "description": "Optional image that will be shown before the 3D model is loaded. This can be used to show a preview of the 3D model that is large and may need some time to load. Note that it makes only sense to add a poster image if the file is not too large in size itself."
+        },
+        {
+          "label": "Default color for hotspots"
+        }
+      ]
+    },
+    {
+      "label": "Size settings",
+      "fields": [
+        {
+          "label": "Maximum width",
+          "description": "H5P will usually scale content to full width. Set a maximum width here in CSS units (px, rem, etc.). Please note that this will not influence the maximum width of the H5P content as a whole."
+        },
+        {
+          "label": "Minimum height",
+          "description": "H5P will usually determine the height based on the width. Change the minimum height here in CSS units (px, rem, etc.) in case the model is displayes too small for your liking."
+        },
+        {
+          "label": "Maximum height",
+          "description": "H5P will usually determine the height based on the width. Set a maximum height here in CSS units (px, rem, etc.). Please note that this will not influence the maximum height of the H5P content as a whole."
+        }
+      ]
+    },
+    {
+      "label": "Behavioural settings",
+      "fields": [
+        {
+          "label": "Presentation",
+          "options": [
+            {
+              "label": "Popup"
+            },
+            {
+              "label": "Panel on the side"
+            }
+          ]
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "No model found",
+          "default": "Could not load a 3D model. Did someone forget to upload one?"
+        },
+        {
+          "label": "No hotspots with contents",
+          "default": "No hotspots with contents found. Did someone forget to add some or to attach the hotspots to the model?"
+        },
+        {
+          "label": "Click on a hotspot to see details",
+          "default": "Click on a hotspot to see details."
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Front of 3D model",
+          "description": "Alternative text for the front of the 3D model.",
+          "default": "Front of 3D model"
+        },
+        {
+          "label": "Back of 3D model",
+          "description": "Alternative text for the back of the 3D model.",
+          "default": "Back of 3D model"
+        },
+        {
+          "label": "Left of 3D model",
+          "description": "Alternative text for the left side of the 3D model.",
+          "default": "Left of 3D model"
+        },
+        {
+          "label": "Right of 3D model",
+          "description": "Alternative text for the right side of the 3D model.",
+          "default": "Right of 3D model"
+        },
+        {
+          "label": "Upper front of 3D model",
+          "description": "Alternative text for the upper front of the 3D model.",
+          "default": "Upper front of 3D model"
+        },
+        {
+          "label": "Upper back of 3D model",
+          "description": "Alternative text for the upper back of the 3D model.",
+          "default": "Upper back of 3D model"
+        },
+        {
+          "label": "Upper left of 3D model",
+          "description": "Alternative text for the upper left side of the 3D model.",
+          "default": "Upper left of 3D model"
+        },
+        {
+          "label": "Upper right of 3D model",
+          "description": "Alternative text for the upper right side of the 3D model.",
+          "default": "Upper right of 3D model"
+        },
+        {
+          "label": "Lower front of 3D model",
+          "description": "Alternative text for the lower front of the 3D model.",
+          "default": "Lower front of 3D model"
+        },
+        {
+          "label": "Lower back of 3D model",
+          "description": "Alternative text for the lower back of the 3D model.",
+          "default": "Lower back of 3D model"
+        },
+        {
+          "label": "Lower left of 3D model",
+          "description": "Alternative text for the lower left side of the 3D model.",
+          "default": "Lower left of 3D model"
+        },
+        {
+          "label": "Lower right of 3D model",
+          "description": "Alternative text for the lower right side of the 3D model.",
+          "default": "Lower right of 3D model"
+        },
+        {
+          "label": "Interaction prompt",
+          "description": "Text that is read out to the user when the 3D model is focused and the user can interact with it.",
+          "default": "Use mouse, touch or arrow keys to move to interact with the 3D model."
+        },
+        {
+          "label": "Text for screen readers. Title for full screen button (enter)",
+          "default": "Enter full screen mode"
+        },
+        {
+          "label": "Text for screen readers. Title for full screen button (exit)",
+          "default": "Exit full screen mode"
+        },
+        {
+          "label": "Text for screen readers. Title for play button",
+          "default": "Play animation"
+        },
+        {
+          "label": "Text for screen readers. Title for pause button",
+          "default": "Pause animation"
+        },
+        {
+          "label": "Text for screen readers. Title for close button",
+          "default": "Close"
+        },
+        {
+          "label": "Text for screen readers. Label for popup",
+          "description": "@label is a placeholder and will be replaced with the respective hotspot label.",
+          "default": "Contents for hotspot @label."
+        }
+      ]
+    }
+  ]
+}

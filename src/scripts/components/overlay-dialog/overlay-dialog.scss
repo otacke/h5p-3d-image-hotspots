@@ -1,0 +1,91 @@
+.h5p-3d-image-hotspots-overlay-dialog {
+  --overlay-dialog-content-padding: var(--h5p-theme-spacing-l, 2rem);
+  --overlay-dialog-content-border-width: calc(var(--h5p-theme-spacing-s, 0.75rem) * 0.75);
+
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &.display-none {
+    display: none;
+  }
+
+  .h5p-3d-image-hotspots-overlay-dialog-outer-wrapper {
+    background-color: var(--h5p-3d-image-hotspots-theme-background);
+    border: var(--overlay-dialog-content-border-width) solid var(--h5p-3d-image-hotspots-theme-background);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    color: var(--h5p-3d-image-hotspots-theme-text-primary);
+    display: flex;
+    flex-direction: column;
+    gap: var(--h5p-theme-spacing-s, 0.5rem);
+    max-height: calc(100% - 2 * var(--overlay-dialog-content-padding));
+    max-width: calc(min(100%, 1080px) - 2 * var(--overlay-dialog-content-padding));
+    min-width: 0;
+    position: relative;
+    top: var(--overlay-dialog-content-padding);
+    width: 100%;
+
+    .h5p-3d-image-hotspots-overlay-dialog-headline {
+      box-sizing: border-box;
+
+      .h5p-3d-image-hotspots-overlay-dialog-headline-text {
+        display: -webkit-box;
+        font-size: var(--h5p-theme-font-size-xl, 1.25rem);
+        font-weight: bold;
+        line-clamp: 3;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        overflow-wrap: anywhere;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    .h5p-3d-image-hotspots-overlay-dialog-button-close {
+      --button-size: 2.25rem;
+      --button-symbol-size: 1.5rem;
+
+      background: var(--h5p-3d-image-hotspots-theme-background);
+      border: none;
+      border-radius: 50%;
+      box-sizing: border-box;
+      color: var(--h5p-3d-image-hotspots-theme-text-primary);
+      cursor: pointer;
+      height: var(--button-size);
+      right: calc(-1 * var(--overlay-dialog-content-border-width) - var(--button-size) / 4);
+      padding: 0;
+      position: absolute;
+      top: calc(-1 * var(--overlay-dialog-content-border-width) - var(--button-size) / 4);
+      transition: transform .1s ease-in-out;
+      width: var(--button-size);
+
+      &:hover {
+        transform: scale(1.25);
+      }
+
+      &::after {
+        font-family: "H5PFontAwesome4", sans-serif;
+        content: var(--icon-hotspot-button-close);
+        border: 1px solid var(--h5p-3d-image-hotspots-theme-text-primary);
+        text-align: center;
+        border-radius: 50%;
+        box-sizing: border-box;
+        width: var(--button-symbol-size);
+        height: var(--button-symbol-size);
+        display: inline-block;
+        line-height: var(--button-symbol-size);
+      }
+    }
+  }
+
+  .h5p-3d-image-hotspots-overlay-dialog-content {
+    overflow-y: auto;
+  }
+}

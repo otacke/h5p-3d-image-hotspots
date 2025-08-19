@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+
+.h5p-3d-image-hotspots {
+  --h5p-3d-image-hotspots-theme-main-cta-base: var(--h5p-theme-main-cta-base, #006FBF);
+  --h5p-3d-image-hotspots-theme-background: var(--h5p-theme-background, #F9FBFF);
+  --h5p-3d-image-hotspots-theme-contrast-cta: var(--h5p-theme-contrast-cta, #EBF7FF);
+  --h5p-3d-image-hotspots-theme-contrast-cta-white: var(--h5p-theme-contrast-cta-white, #006FBF);
+  --h5p-3d-image-hotspots-theme-ui-base: var(--h5p-theme-ui-base, #FFFFFF);
+  --h5p-3d-image-hotspots-theme-contrast-cta-white: var(--h5p-theme-contrast-cta-white, #006FBF);
+  --h5p-3d-image-hotspots-theme-text-primary: var(--h5p-theme-text-primary, #101729);
+  --h5p-3d-image-hotspots-theme-secondary-contrast-cta-hover: var(--h5p-theme-secondary-contrast-cta-hover, #FFFFFF);
+
+  --icon-font-awesome-plus: "\f067";
+  --icon-font-awesome-minus: "\f068";
+  --icon-font-awesome-xmark: "\f00d";
+  --icon-font-awesome-check: "\f00c";
+  --icon-font-awesome-question: "\f128";
+  --icon-font-awesome-info: "\f129";
+  --icon-font-awesome-exclamation: "\f12a";
+  --icon-font-awesome-expand: "\f065";
+  --icon-font-awesome-compress: "\f066";
+  --icon-font-awesome-play: "\f04b";
+  --icon-font-awesome-pause: "\f04c";
+
+  --icon-hotspot-button-plus: var(--icon-font-awesome-plus);
+  --icon-hotspot-button-minus: var(--icon-font-awesome-minus);
+  --icon-hotspot-button-times: var(--icon-font-awesome-xmark);
+  --icon-hotspot-button-check: var(--icon-font-awesome-check);
+  --icon-hotspot-button-question: var(--icon-font-awesome-question);
+  --icon-hotspot-button-info: var(--icon-font-awesome-info);
+  --icon-hotspot-button-exclamation: var(--icon-font-awesome-exclamation);
+  --icon-hotspot-button-close: var(--icon-font-awesome-xmark);
+
+  --icon-play: var(--icon-font-awesome-play);
+  --icon-pause: var(--icon-font-awesome-pause);
+  --icon-enter-fullscreen: var(--icon-font-awesome-expand);
+  --icon-exit-fullscreen: var(--icon-font-awesome-compress);
+
+  background-color: var(--h5p-3d-image-hotspots-theme-ui-base);
+  color: var(--h5p-3d-image-hotspots-theme-text-primary);
+  container-name: h5p-3d-image-hotspots;
+  container-type: inline-size;
+  width: 100%;
+}

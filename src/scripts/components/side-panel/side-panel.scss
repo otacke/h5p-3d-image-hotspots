@@ -1,0 +1,35 @@
+.h5p-3d-image-hotspots-sidepanel {
+  background-color: var(--h5p-3d-image-hotspots-theme-background);
+  color: var(--h5p-3d-image-hotspots-theme-text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--h5p-theme-spacing-xs, 0.5rem);
+  max-height: var(--max-height-primary, var(--max-height-secondary));
+  overflow-y: auto;
+
+  .h5p-3d-image-hotspots-sidepanel-header {
+    font-size: var(--h5p-theme-font-size-l, 1.125rem);
+    font-weight: bold;
+    padding-inline: var(--h5p-theme-spacing-xs, 0.5rem);
+    padding-top: var(--h5p-theme-spacing-xs, 0.5rem);
+
+    &.display-none {
+      display: none;
+    }
+  }
+
+  .h5p-3d-image-hotspots-sidepanel-content {
+    padding-bottom: var(--h5p-theme-spacing-xs, 0.5rem);
+    padding-inline: var(--h5p-theme-spacing-xs, 0.5rem);
+
+    .h5p-3d-image-hotspots-sidepanel-placeholder {
+      text-align: center;
+    }
+  }
+
+  &:has(.h5p-3d-image-hotspots-sidepanel-header.display-none) {
+    .h5p-3d-image-hotspots-sidepanel-content {
+      padding-top: var(--h5p-theme-spacing-xs, 0.5rem);
+    }
+  }
+}

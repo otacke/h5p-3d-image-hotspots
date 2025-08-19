@@ -1,0 +1,273 @@
+{
+  "semantics": [
+    {
+      "label": "Modell",
+      "fields": [
+        {
+          "label": "3D-Modelldatei",
+          "description": "Lade hier eine glTF-Datei (.glb / .gltf) hoch. Das bevorzugte Format ist \"glTF 2.0 binary\" in einer einzigen Datei."
+        },
+        {
+          "label": "Alternativer Text",
+          "description": "Alternativer Text für Bildschirmleser."
+        }
+      ]
+    },
+    {
+      "label": "Hotspots",
+      "fields": [
+        {
+          "label": "Hotspots",
+          "widgets": [
+            {
+              "label": "Default"
+            }
+          ],
+          "field": {
+            "label": "Hotspot",
+            "fields": [
+              {
+                "label": "Id"
+              },
+              {
+                "label": "Beschriftung/Beschreibung"
+              },
+              {
+                "label": "Erscheinungsbild",
+                "fields": [
+                  {
+                    "label": "Typ",
+                    "options": [
+                      {
+                        "label": "Label"
+                      },
+                      {
+                        "label": "Button"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Symbol",
+                    "options": [
+                      {
+                        "label": "Plus"
+                      },
+                      {
+                        "label": "Minus"
+                      },
+                      {
+                        "label": "Malzeichen (X)"
+                      },
+                      {
+                        "label": "Haken"
+                      },
+                      {
+                        "label": "Fragezeichen"
+                      },
+                      {
+                        "label": "Infozeichen (i)"
+                      },
+                      {
+                        "label": "Ausrufezeichen"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Farbe"
+                  }
+                ]
+              },
+              {
+                "label": "Inhalte",
+                "field": {
+                  "label": "Inhalt",
+                  "fields": [
+                    {
+                      "label": "Inhaltselement"
+                    },
+                    {
+                      "label": "dummy"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Oberfläche"
+              }
+            ]
+          }
+        },
+        {
+          "label": "dummy"
+        }
+      ]
+    },
+    {
+      "label": "Visualles Erscheinungsbild",
+      "fields": [
+        {
+          "label": "Hintergrundbild",
+          "description": "Optionales Bild, das als Hintergrund verwendet wird."
+        },
+        {
+          "label": "Hintergrundfarbe"
+        },
+        {
+          "label": "Posterbild",
+          "description": "Optionales Bild, das angezeigt wird, bevor das 3D-Modell geladen wird. Dies kann verwendet werden, um eine Vorschau des 3D-Modells zu zeigen, das groß ist und möglicherweise einige Zeit zum Laden benötigt. Es macht nur dann Sinn, ein Posterbild hinzuzufügen, wenn die Datei selbst nicht zu groß ist."
+        },
+        {
+          "label": "Standardfarbe für Hotspots"
+        }
+      ]
+    },
+    {
+      "label": "Größeneinstellungen",
+      "fields": [
+        {
+          "label": "Maximale Breite",
+          "description": "H5P skaliert den Inhalt normalerweise auf die volle Breite. Lege hier eine maximale Breite in CSS-Einheiten (px, rem, etc.) fest. Bitte beachte, dass dies keinen Einfluss auf die maximale Breite des H5P-Inhalts als Ganzes hat."
+        },
+        {
+          "label": "Minimale Höhe",
+          "description": "H5P bestimmt die Höhe normalerweise anhand der Breite. Ändere hier die minimale Höhe in CSS-Einheiten (px, rem, etc.), falls das Modell zu klein für deinen Geschmack dargestellt wird."
+        },
+        {
+          "label": "Maximale Höhe",
+          "description": "H5P bestimmt die Höhe normalerweise anhand der Breite. Lege hier eine maximale Höhe in CSS-Einheiten (px, rem, etc.) fest. Bitte beachte, dass dies keinen Einfluss auf die maximale Höhe des H5P-Inhalts als Ganzes hat."
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "fields": [
+        {
+          "label": "Präsentation",
+          "options": [
+            {
+              "label": "Popup"
+            },
+            {
+              "label": "Panel an der Seite"
+            }
+          ]
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    },
+    {
+      "label": "Benutzeroberfläche",
+      "fields": [
+        {
+          "label": "Kein Modell gefunden",
+          "default": "Konnte kein 3D-Modell laden. Hat jemand vergessen, eines hochzuladen?"
+        },
+        {
+          "label": "Keine Hotspots mit Inhalten",
+          "default": "Es wurden keine Hotspots mit Inhalten gefunden. Hat jemand vergessen, welche hinzuzufügen oder die Hotspots mit dem Modell zu verknüpfen?"
+        },
+        {
+          "label": "Klicke auf einen Hotspot, um Details zu sehen",
+          "default": "Klicke auf einen Hotspot, um Details zu sehen."
+        }
+      ]
+    },
+    {
+      "label": "Texte zur Barrierefreiheit",
+      "fields": [
+        {
+          "label": "Vorderseite des 3D-Modells",
+          "description": "Alternativer Text für die Vorderseite des 3D-Modells.",
+          "default": "Vorderseite des 3D-Modells"
+        },
+        {
+          "label": "Rückseite des 3D-Modells",
+          "description": "Alternativer Text für die Rückseite des 3D-Modells.",
+          "default": "Rückseite des 3D-Modells"
+        },
+        {
+          "label": "Linke Seite des 3D-Modells",
+          "description": "Alternativer Text für die linke Seite des 3D-Modells.",
+          "default": "Linke Seite des 3D-Modells"
+        },
+        {
+          "label": "Rechts vom 3D-Modell",
+          "description": "Alternativer Text für die rechte Seite des 3D-Modells.",
+          "default": "Rechte Seite des 3D-Modells"
+        },
+        {
+          "label": "Obere Vorderseite des 3D-Modells",
+          "description": "Alternativer Text für die obere Vorderseite des 3D-Modells.",
+          "default": "Obere Vorderseite des 3D-Modells"
+        },
+        {
+          "label": "Obere Rückseite des 3D-Modells",
+          "description": "Alternativer Text für die obere Rückseite des 3D-Modells.",
+          "default": "Obere Rückseite des 3D-Modells"
+        },
+        {
+          "label": "Obere linke Seite des 3D-Modells",
+          "description": "Alternativer Text für die obere linke Seite des 3D-Modells",
+          "default": "Obere linke Seite des 3D-Modells"
+        },
+        {
+          "label": "Obere rechte Seite des 3D-Modells",
+          "description": "Alternativer Text für die obere rechte Seite des 3D-Modells",
+          "default": "Obere rechte Seite des 3D-Modells"
+        },
+        {
+          "label": "Untere Vorderseite des 3D-Modells",
+          "description": "Alternativer Text für die untere Vorderseite des 3D-Modells.",
+          "default": "Untere Vorderseite des 3D-Modells"
+        },
+        {
+          "label": "Untere Rückseite des 3D-Modells",
+          "description": "Alternativer Text für die untere Rückseite des 3D-Modells.",
+          "default": "Untere Rückseite des 3D-Modells"
+        },
+        {
+          "label": "Untere linke Seite des 3D-Modells",
+          "description": "Alternativer Text für die untere linke Seite des 3D-Modells",
+          "default": "Untere linke Seite des 3D-Modells"
+        },
+        {
+          "label": "Untere rechte Seite des 3D-Modells",
+          "description": "Alternativer Text für die untere rechte Seite des 3D-Modells",
+          "default": "Untere rechte Seite des 3D-Modells"
+        },
+        {
+          "label": "Interaktionsaufforderung",
+          "description": "Text, der den Benutzenden vorgelesen wird, wenn das 3D-Modell fokussiert ist und die Benutzenden damit interagieren können.",
+          "default": "Bewege mit der Maus, durch Berührung oder mit den Pfeiltasten, um mit dem 3D-Modell zu interagieren."
+        },
+{
+          "label": "Text für Bildschirmleser. Titel für Vollbild-Button (aufrufen)",
+          "default": "Vollbildmodus aufrufen"
+        },
+        {
+          "label": "Text für Bildschirmleser. Titel für Vollbild-Button (beenden)",
+          "default": "Vollbildmodus beenden"
+        },
+        {
+          "label": "Text für Bildschirmleser. Titel für die Wiedergabetaste",
+          "default": "Animation abspielen"
+        },
+        {
+          "label": "Text für Bildschirmleser. Titel für Pausentaste",
+          "default": "Animation anhalten"
+        },
+        {
+          "label": "Text für Bildschirmleser. Titel für Schließen-Button",
+          "default": "Schließen"
+        },
+        {
+          "label": "Text für Bildschirmleser. Bezeichnung für Popup",
+          "description": "@label ist ein Platzhalter und wird durch die jeweilige Hotspot-Bezeichnung ersetzt.",
+          "default": "Inhalte für Hotspot @label."
+        }
+      ]
+    }
+  ]
+}
