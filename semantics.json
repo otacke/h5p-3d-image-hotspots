@@ -47,7 +47,7 @@
         "type": "list",
         "label": "Hotspots",
         "importance": "high",
-        "item": "hotspot",
+        "entity": "hotspot",
         "widgets": [
           {
             "name": "VerticalTabs",
