@@ -76,3 +76,9 @@
     content: var(--icon-enter-fullscreen);
   }
 }
+
+.h5p-3d-image-hotspots-main:not(:has(.h5p-3d-image-hotspots-sidepanel)):has(.h5p-3d-image-hotspots-overlay-dialog:not(.display-none)) {
+  .h5p-3d-image-hotspots-overlay-buttons {
+    z-index: 0; /* Put behind dialog when sidepanel is not present */
+  }
+}
