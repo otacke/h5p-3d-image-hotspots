@@ -18,6 +18,7 @@
       "fields": [
         {
           "label": "Hotspots",
+          "entity": "hotspot",
           "widgets": [
             {
               "label": "Default"
