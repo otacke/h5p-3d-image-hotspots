@@ -72,8 +72,6 @@
     max-width: 30ch;
     overflow: hidden;
     text-overflow: ellipsis;
-    transform: translate(1.25rem, calc(-50% + 0.5rem));
-    padding: 0.25rem 0.5rem;
     transform: translate(calc(var(--h5p-theme-spacing-s, 1rem) * 1.25), calc(-50% + var(--h5p-theme-spacing-xxs, 0.5rem)));
     padding: calc(var(--h5p-theme-spacing-s, 1rem) * 0.25) var(--h5p-theme-spacing-xxs, 0.5rem);
 

@@ -159,8 +159,14 @@ export default class FocusTrap {
   }
 
   /**
+   * @typedef {object} FocusElementInfo
+   * @property {HTMLElement|null} focusElement Focus element.
+   * @property {boolean|undefined} needsScrollIntoView True if element needs to be scrolled into view, false otherwise.
+   */
+
+  /**
    * Determine the focus element inside the modal.
-   * @returns {{ focusElement: HTMLElement|null, needsScrollIntoView: boolean|undefined }} Focus element and scroll information.
+   * @returns {FocusElementInfo} Focus element and scroll information.
    */
   determineFocusElement() {
     let focusElement = (this.params.initialFocus && this.isChild(this.params.initialFocus)) ?

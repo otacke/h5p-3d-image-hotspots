@@ -1,7 +1,7 @@
 .h5p-3d-image-hotspots-content-bundle {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: var(--h5p-theme-spacing-xs, 0.65rem);
+  gap: var(--h5p-theme-spacing-xs, 0.65rem);
 
   .h5p-3d-image-hotspots-content-wrapper {
     .h5p-audio-inner {
