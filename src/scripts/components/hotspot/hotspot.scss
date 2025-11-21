@@ -9,7 +9,7 @@
   transition: all .2s ease-in-out;
   width: 1rem;
 
-  &:hover {
+  &:hover, &:focus-visible {
     transform: scale(1.5);
   }
 
