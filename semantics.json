@@ -258,22 +258,22 @@
       {
         "name": "maxWidth",
         "type": "text",
-        "label": "Maximum width",
-        "description": "H5P will usually scale content to full width. Set a maximum width here in CSS units (px, rem, etc.). Please note that this will not influence the maximum width of the H5P content as a whole.",
+        "label": "Maximum model width",
+        "description": "The model will usually use all of the available width and so will the H5P content. Your model may be too large for your taste then. Set a maximum model width here in CSS units (px, rem, etc.). Please note that this will not influence the maximum width of the H5P content as a whole.",
         "optional": true
       },
       {
         "name": "minHeight",
         "type": "text",
-        "label": "Minimum height",
-        "description": "H5P will usually determine the height based on the width. Change the minimum height here in CSS units (px, rem, etc.) in case the model is displayes too small for your liking.",
+        "label": "Minimum model height",
+        "description": "H5P will usually determine the height based on the width. Change the minimum model height here in CSS units (px, rem, etc.) in case the model is displayed too small for your liking.",
         "optional": true
       },
       {
         "name": "maxHeight",
         "type": "text",
-        "label": "Maximum height",
-        "description": "H5P will usually determine the height based on the width. Set a maximum height here in CSS units (px, rem, etc.). Please note that this will not influence the maximum height of the H5P content as a whole.",
+        "label": "Maximum model height",
+        "description": "H5P will usually determine the height based on the width. Set a maximum model height here in CSS units (px, rem, etc.). Please note that this will not influence the maximum height of the H5P content as a whole.",
         "optional": true
       }
     ]

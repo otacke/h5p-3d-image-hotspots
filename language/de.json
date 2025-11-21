@@ -126,15 +126,15 @@
       "label": "Größeneinstellungen",
       "fields": [
         {
-          "label": "Maximale Breite",
-          "description": "H5P skaliert den Inhalt normalerweise auf die volle Breite. Lege hier eine maximale Breite in CSS-Einheiten (px, rem, etc.) fest. Bitte beachte, dass dies keinen Einfluss auf die maximale Breite des H5P-Inhalts als Ganzes hat."
+          "label": "Maximale Breite des Modells",
+          "description": "Das Modell wird normalerweise die gesamte verfügbare Breite nutzen, ebenso wie der H5P-Inhalt. Dein Modell könnte dann für deinen Geschmack zu groß sein. Lege hier eine maximale Modellbreite in CSS-Einheiten (px, rem, etc.) fest. Bitte beachte, dass dies keinen Einfluss auf die maximale Breite des H5P-Inhalts als Ganzes hat."
         },
         {
-          "label": "Minimale Höhe",
+          "label": "Minimale Höhe des Modells",
           "description": "H5P bestimmt die Höhe normalerweise anhand der Breite. Ändere hier die minimale Höhe in CSS-Einheiten (px, rem, etc.), falls das Modell zu klein für deinen Geschmack dargestellt wird."
         },
         {
-          "label": "Maximale Höhe",
+          "label": "Maximale Höhe des Modells",
           "description": "H5P bestimmt die Höhe normalerweise anhand der Breite. Lege hier eine maximale Höhe in CSS-Einheiten (px, rem, etc.) fest. Bitte beachte, dass dies keinen Einfluss auf die maximale Höhe des H5P-Inhalts als Ganzes hat."
         }
       ]
