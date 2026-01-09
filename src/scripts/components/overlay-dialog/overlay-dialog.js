@@ -18,7 +18,7 @@ export default class OverlayDialog {
     this.callbacks = Util.extend({
       onClosed: () => {},
       onOpenAnimationEnded: () => {},
-      onCloseAnimationEnded: () => {}
+      onCloseAnimationEnded: () => {},
     }, callbacks);
 
     this.handleGlobalClick = this.handleGlobalClick.bind(this);
@@ -47,7 +47,7 @@ export default class OverlayDialog {
     this.buttonClose = document.createElement('button');
     this.buttonClose.classList.add('h5p-3d-image-hotspots-overlay-dialog-button-close');
     this.buttonClose.setAttribute(
-      'aria-label', this.params.dictionary.get('a11y.close')
+      'aria-label', this.params.dictionary.get('a11y.close'),
     );
     this.buttonClose.addEventListener('click', () => {
       this.callbacks.onClosed();
@@ -62,7 +62,7 @@ export default class OverlayDialog {
     this.focusTrap = new FocusTrap({
       trapElement: this.dom,
       closeElement: this.buttonClose,
-      fallbackContainer: this.content
+      fallbackContainer: this.content,
     });
   }
 
@@ -124,7 +124,7 @@ export default class OverlayDialog {
     this.headlineText.innerText = text;
     this.dom.setAttribute(
       'aria-label',
-      this.params.dictionary.get('a11y.popupLabel').replace('@label', text)
+      this.params.dictionary.get('a11y.popupLabel').replace('@label', text),
     );
   }
 

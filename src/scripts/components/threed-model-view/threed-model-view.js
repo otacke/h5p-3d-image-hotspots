@@ -17,12 +17,12 @@ export default class ThreeDModelView {
 
   constructor(params = {}, callbacks = {}) {
     this.params = Util.extend({
-      hotspots: []
+      hotspots: [],
     }, params);
 
     this.callbacks = Util.extend({
       onModelLoaded: () => {},
-      onHotspotClicked: () => {}
+      onHotspotClicked: () => {},
     }, callbacks);
 
     this.dom = this.buildDOM(this.params);
@@ -83,7 +83,7 @@ export default class ThreeDModelView {
       const hotspot = new Hotspot(hotspotParams, {
         onClick: (hotspotIndex) => {
           this.callbacks.onHotspotClicked(hotspotIndex);
-        }
+        },
       });
 
       dom.appendChild(hotspot.getDOM());
@@ -92,7 +92,7 @@ export default class ThreeDModelView {
     dom.addEventListener('load', () => {
       this.updateAspectRatio();
       this.callbacks.onModelLoaded({
-        availableAnimations: dom.availableAnimations ?? []
+        availableAnimations: dom.availableAnimations ?? [],
       });
     });
 
@@ -255,7 +255,7 @@ export default class ThreeDModelView {
       'back', 'front', 'left', 'right',
       'lower-back', 'lower-front', 'lower-left', 'lower-right',
       'upper-back', 'upper-front', 'upper-left', 'upper-right',
-      'interaction-prompt'
+      'interaction-prompt',
     ];
 
     const a11yAttributes = {};

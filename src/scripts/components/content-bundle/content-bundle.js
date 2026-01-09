@@ -31,7 +31,7 @@ export default class ContentBundle {
       contentParams,
       this.params.globals.get('contentId'),
       H5P.jQuery(instanceWrapper),
-      true
+      true,
     );
 
     if (!instance) {
@@ -48,12 +48,12 @@ export default class ContentBundle {
 
     // Resize parent when children resize
     this.bubbleUp(
-      instance, 'resize', this.params.globals.get('mainInstance')
+      instance, 'resize', this.params.globals.get('mainInstance'),
     );
 
     // Resize children to fit inside parent
     this.bubbleDown(
-      this.params.globals.get('mainInstance'), 'resize', [instance]
+      this.params.globals.get('mainInstance'), 'resize', [instance],
     );
 
     this.instances.push(instance);

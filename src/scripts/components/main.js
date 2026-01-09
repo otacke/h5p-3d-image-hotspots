@@ -41,8 +41,8 @@ export default class Main {
         {
           onClosed: () => {
             this.overlayDialog.hide();
-          }
-        }
+          },
+        },
       );
       this.dom.append(this.overlayDialog.getDOM());
     }
@@ -67,7 +67,7 @@ export default class Main {
     // Retrieve true local source
     const element = document.createElement('div');
     H5P.setSource(
-      element, { path: this.params.model?.file?.path ?? '' }, this.params.globals.get('contentId')
+      element, { path: this.params.model?.file?.path ?? '' }, this.params.globals.get('contentId'),
     );
 
     // Optional poster
@@ -75,13 +75,13 @@ export default class Main {
     if (this.params.visuals?.poster?.path) {
       poster.addEventListener('load', () => {
         this.model.updateAspectRatio(
-          poster.naturalWidth / poster.naturalHeight
+          poster.naturalWidth / poster.naturalHeight,
         );
 
         this.trigger('resize');
       });
       H5P.setSource(
-        poster, { path: this.params.visuals.poster.path }, this.params.globals.get('contentId')
+        poster, { path: this.params.visuals.poster.path }, this.params.globals.get('contentId'),
       );
     }
 
@@ -94,7 +94,7 @@ export default class Main {
       alt: Util.purifyHTML(this.params.model.alt),
       size: this.params.size,
       a11y: this.params.a11y,
-      hotspotColorDefault: this.params.visuals.hotspotColorDefault
+      hotspotColorDefault: this.params.visuals.hotspotColorDefault,
     }, {
       onModelLoaded: (params) => {
         this.handleModelLoaded(params);
@@ -104,7 +104,7 @@ export default class Main {
       },
       onHotspotClicked: (hotspotIndex) => {
         this.handleHotspotClicked(hotspotIndex);
-      }
+      },
     });
 
     this.modelContainer = document.createElement('div');
@@ -134,8 +134,8 @@ export default class Main {
         },
         onFullscreenButtonClicked: () => {
           this.callbacks.onFullscreenButtonClicked();
-        }
-      }
+        },
+      },
     );
 
     if (!!params.availableAnimations) {
@@ -225,13 +225,13 @@ export default class Main {
       const backgroundImage = document.createElement('img');
       if (this.params.visuals.backgroundImage.path) {
         H5P.setSource(
-          backgroundImage, { path: this.params.visuals.backgroundImage.path }, this.params.globals.get('contentId')
+          backgroundImage, { path: this.params.visuals.backgroundImage.path }, this.params.globals.get('contentId'),
         );
       }
 
       this.modelContainer.classList.add('has-background-image');
       this.modelContainer.style.setProperty(
-        '--h5p-3d-image-hotspots-background-image', `url(${backgroundImage.src})`
+        '--h5p-3d-image-hotspots-background-image', `url(${backgroundImage.src})`,
       );
     }
     else if (
@@ -246,7 +246,7 @@ export default class Main {
 
       if (this.modelContainer.classList.contains('h5p-standalone') && h5pContent) {
         h5pContent.style.setProperty(
-          '--h5p-3d-image-hotspots-background-color', this.params.visuals.backgroundColor
+          '--h5p-3d-image-hotspots-background-color', this.params.visuals.backgroundColor,
         );
 
         h5pContent.style.backgroundColor =
@@ -254,7 +254,7 @@ export default class Main {
       }
       else {
         this.modelContainer.style.setProperty(
-          '--h5p-3d-image-hotspots-background-color', this.params.visuals.backgroundColor
+          '--h5p-3d-image-hotspots-background-color', this.params.visuals.backgroundColor,
         );
       }
 

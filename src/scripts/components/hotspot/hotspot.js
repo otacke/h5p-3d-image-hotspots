@@ -21,7 +21,7 @@ export default class Hotspot {
       appearance: {
         type: 'label',
         icon: 'plus',
-      }
+      },
     }, params);
 
     this.dom = document.createElement('button');

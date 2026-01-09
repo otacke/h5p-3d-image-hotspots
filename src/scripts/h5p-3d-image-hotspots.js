@@ -55,7 +55,7 @@ export default class ThreeDImageHotspots extends H5P.EventDispatcher {
 
     if (!this.params.model?.file?.path) {
       const messageBox = new MessageBox({
-        text: this.dictionary.get('l10n.noModel')
+        text: this.dictionary.get('l10n.noModel'),
       });
       this.dom = messageBox.getDOM();
       return;
@@ -63,7 +63,7 @@ export default class ThreeDImageHotspots extends H5P.EventDispatcher {
 
     if (this.params.hotspots.hotspots.length === 0) {
       const messageBox = new MessageBox({
-        text: this.dictionary.get('l10n.noHotspotsWithContents')
+        text: this.dictionary.get('l10n.noHotspotsWithContents'),
       });
       this.dom = messageBox.getDOM();
       return;
@@ -91,8 +91,8 @@ export default class ThreeDImageHotspots extends H5P.EventDispatcher {
       {
         onFullscreenButtonClicked: () => {
           this.handleFullscreenClicked();
-        }
-      }
+        },
+      },
     );
     this.dom = this.main.getDOM();
 
@@ -111,7 +111,7 @@ export default class ThreeDImageHotspots extends H5P.EventDispatcher {
         window.setTimeout(() => {
           this.main.setModelMaxSize({
             maxHeight: maxHeight,
-            maxWidth: maxWidth
+            maxWidth: maxWidth,
           });
         }, FULLSCREEN_TIMEOUT_SHORT_MS); // True viewport height/width may not be available immediately
       });
@@ -182,7 +182,7 @@ export default class ThreeDImageHotspots extends H5P.EventDispatcher {
   getTitle() {
     // H5P Core function: createTitle
     return H5P.createTitle(
-      this.extras?.metadata?.title || this.getDescription()
+      this.extras?.metadata?.title || this.getDescription(),
     );
   }
 
