@@ -20,7 +20,7 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
-    "@babel/cli": "^7.29.7",
+    "@babel/cli": "^8.0.1",
     "@babel/core": "^8.0.1",
     "@babel/preset-env": "^8.0.2",
     "babel-loader": "^10.1.1",
@@ -33,6 +33,7 @@
     "stylelint": "^17.14.0",
     "stylelint-config-recommended": "^18.0.0",
     "stylelint-config-recommended-scss": "^17.0.1",
+    "terser-webpack-plugin": "^5.6.1",
     "webpack": "^5.108.3",
     "webpack-cli": "^7.1.0"
   },
